@@ -1,0 +1,16 @@
+name: Print to Logs
+
+on:
+  pull_request:
+
+jobs:
+  print_something:
+    runs-on: ubuntu-latest
+    name: Print Something
+    steps: 
+      - name: Print Something
+        shell: bash
+        run: | 
+          echo "Printing something cool."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
