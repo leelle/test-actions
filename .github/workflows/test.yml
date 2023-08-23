@@ -1,0 +1,20 @@
+name: Print to Logs
+
+on:
+  workflow_dispatch:
+    inputs:
+      thingToPrint:
+        description: 'Thing to Print'
+        required: true
+
+jobs:
+  print_something:
+    runs-on: ubuntu-latest
+    name: Print Something
+    steps: 
+      - name: Print Something
+        shell: bash
+        run: | 
+          echo "${{ inputs.thingToPrint }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
