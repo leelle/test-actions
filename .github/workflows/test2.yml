@@ -1,4 +1,4 @@
-name: Print to Logs
+name: Print to Logs 2
 
 on:
   pull_request:
